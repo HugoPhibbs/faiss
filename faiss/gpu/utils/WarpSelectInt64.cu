@@ -49,7 +49,7 @@
     Tensor<long, 2, true>& outK,
     Tensor<idx_t, 2, true>& outV,
     bool dir,
-    long k,
+    int k,
     cudaStream_t stream) {
 FAISS_ASSERT(k <= 2048);
 
