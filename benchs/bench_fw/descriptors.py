@@ -113,6 +113,8 @@ class DatasetDescriptor:
     # desc_name
     desc_name: Optional[str] = None
 
+    filename_suffix: Optional[str] = None
+
     normalize_L2: bool = False
 
     def __hash__(self):
@@ -138,6 +140,8 @@ class DatasetDescriptor:
             ).replace("=", "_").replace("/", "_")
         if self.num_vectors is not None:
             filename += f"_{self.num_vectors}"
+        if self.filename_suffix is not None:
+            filename += f"_{self.filename_suffix}"
         filename += "."
 
         self.desc_name = filename
@@ -224,6 +228,7 @@ class CodecDescriptor(IndexBaseDescriptor):
     construction_params: Optional[List[Dict[str, int]]] = None
     training_vectors: Optional[DatasetDescriptor] = None
     normalize_l2: bool = False
+    is_spherical: bool = False
     FILENAME_PREFIX: str = "xt"
 
     def __post_init__(self):
