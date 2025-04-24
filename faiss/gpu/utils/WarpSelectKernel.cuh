@@ -76,6 +76,22 @@ void runWarpSelect(
         cudaStream_t stream);
 
 void runWarpSelect(
+        Tensor<int, 2, true>& in,
+        Tensor<int, 2, true>& outKeys,
+        Tensor<idx_t, 2, true>& outIndices,
+        bool dir,
+        int k,
+        cudaStream_t stream);
+
+void runWarpSelect(
+        Tensor<long, 2, true>& in,
+        Tensor<long, 2, true>& outKeys,
+        Tensor<idx_t, 2, true>& outIndices,
+        bool dir,
+        int k,
+        cudaStream_t stream);
+
+void runWarpSelect(
         Tensor<half, 2, true>& in,
         Tensor<half, 2, true>& outKeys,
         Tensor<idx_t, 2, true>& outIndices,

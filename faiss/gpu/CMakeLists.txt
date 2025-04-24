@@ -59,6 +59,8 @@ set(FAISS_GPU_SRC
   utils/StackDeviceMemory.cpp
   utils/Timer.cpp
   utils/WarpSelectFloat.cu
+  utils/WarpSelectInt32.cu
+  utils/WarpSelectInt64.cu
   utils/blockselect/BlockSelectFloat1.cu
   utils/blockselect/BlockSelectFloat32.cu
   utils/blockselect/BlockSelectFloat64.cu
@@ -70,6 +72,8 @@ set(FAISS_GPU_SRC
   utils/blockselect/BlockSelectFloatT512.cu
   utils/blockselect/BlockSelectFloatT1024.cu
   utils/blockselect/BlockSelectFloatT2048.cu
+  utils/warpselect/WarpSelectImplInt32.cu
+  utils/warpselect/WarpSelectImplInt64.cu
   utils/warpselect/WarpSelectFloat1.cu
   utils/warpselect/WarpSelectFloat32.cu
   utils/warpselect/WarpSelectFloat64.cu
